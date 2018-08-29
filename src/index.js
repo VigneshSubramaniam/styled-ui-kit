@@ -1,9 +1,5 @@
-import Theme from './components/Theme';
-import { configTheme } from './components/Theme/utils';
-import { globalConfig } from './components/globals/globalConfig';
-import Button from './components/Buttons/Button'
-
-export { configTheme, Theme };
-export { globalConfig };
-export { Button }
+export { configTheme } from './components/Theme/utils';
+export {default as Theme} from './components/Theme';
+export { globalConfig } from './components/globals/globalConfig';
+export { Button } from './components/Buttons/Button'
 

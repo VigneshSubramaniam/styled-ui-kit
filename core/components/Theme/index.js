@@ -41,7 +41,7 @@ var Theme = function (_React$Component) {
 
       return React.createElement(
         ThemeProvider,
-        { theme: this.checkDefaultTheme() ? themeDefault : theme },
+        { theme: this.checkDefaultTheme() ? themeDefault.palette : theme },
         children
       );
     }
