@@ -26,7 +26,7 @@ class Theme extends React.Component<Props>{
       theme
     } = this.props;
     return (
-      <ThemeProvider theme={this.checkDefaultTheme() ? themeDefault : theme}>  
+      <ThemeProvider theme={this.checkDefaultTheme() ? themeDefault.palette : theme}>  
         {children}
       </ThemeProvider>
     )
