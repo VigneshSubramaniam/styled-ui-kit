@@ -29,12 +29,13 @@ export const BasicButton = styled.button`
     line-height:30px;
     text-align: center;
     cursor: ${props => (props.disabled && "not-allowed") || "pointer"};
+    opacity: ${props =>(props.disabled && 0.3) || 1};
     background : ${props => props.primary ? 
                     props.theme.button.primaryBg 
                         : props.theme.button.background 
                             ? props.theme.button.background 
-                                : props.theme.button.defaultBg};
-    
+                                : props.theme.button.defaultBg}; 
+    background-color : ${props => props.disabled && props.theme.button.disabledBg}                            
     border-left: ${props => props.theme.button.borderLeft};
 
     font-size: ${({theme}) => theme.button.smallFontSize};
@@ -45,13 +46,13 @@ export const BasicButton = styled.button`
 
     border-radius: ${props => props.borderRadius || '2px'};
 
-    color:${props => props.primary?
+    color:${props => props.disabled ? props.theme.button.disabledTextColor :  props.primary?
             props.theme.button.primaryTextColor 
                 : props.theme.textColor };
     &:hover{
-        background-color: ${props => props.backgroundColor 
+        background-color: ${props => !props.disabled && props.backgroundColor 
             ? hexa(props.backgroundColor, 0.9)
-                : props.primary? hexa(props.theme.button.hoverPrimary, 0.9)
+                : props.primary && !props.disabled? hexa(props.theme.button.hoverPrimary, 0.9)
                     : ""};
       };
     svg {
