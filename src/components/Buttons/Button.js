@@ -1,5 +1,4 @@
 import React ,{Component} from 'react';
-import styled from 'styled-components';
 import {BasicButton} from './ButtonTypes'
 
 type Props = {
@@ -13,19 +12,13 @@ const defaultProps = {
 
 class Button extends Component<Props>{
     static defaultProps = defaultProps;
-    getTemplate = () =>{    
-        return this.props.getTemplate()
-    }
     render(){
         const {
-            children,
-            icon
+            children
         } = this.props;
         return(
             <BasicButton {...this.props}>
-                {
-                    this.props.getTemplate ? (this.getTemplate()) : ('')
-                }
+                { this.props.getTemplate && this.props.getTemplate() }
                 {children}
             </BasicButton>
         )

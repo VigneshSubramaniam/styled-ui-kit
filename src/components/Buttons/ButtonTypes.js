@@ -28,19 +28,23 @@ export const BasicButton = styled.button`
     text-decoration: none;
     line-height:30px;
     text-align: center;
-    
+    cursor: ${props => (props.disabled && "not-allowed") || "pointer"};
     background : ${props => props.primary ? 
                     props.theme.button.primaryBg 
                         : props.theme.button.background 
                             ? props.theme.button.background 
                                 : props.theme.button.defaultBg};
+    
+    border-left: ${props => props.theme.button.borderLeft};
 
     font-size: ${({theme}) => theme.button.smallFontSize};
 
     border: 1px solid ${props => props.primary? 
                         props.theme.button.borderPrimary 
                             : props.theme.button.borderDefault};
-    border-radius: 2px;
+
+    border-radius: ${props => props.borderRadius || '2px'};
+
     color:${props => props.primary?
             props.theme.button.primaryTextColor 
                 : props.theme.textColor };
@@ -49,5 +53,8 @@ export const BasicButton = styled.button`
             ? hexa(props.backgroundColor, 0.9)
                 : props.primary? hexa(props.theme.button.hoverPrimary, 0.9)
                     : ""};
-      }
+      };
+    svg {
+        vertical-align: sub;
+    }
 `
