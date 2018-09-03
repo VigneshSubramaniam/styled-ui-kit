@@ -13,13 +13,14 @@ npm i --save styled-ui-kit
 
 ```jsx
 import React from 'react'
-import { Theme, configTheme, globalConfig } from 'styled-ui-kit'
+import { Theme, configTheme, globalConfig, Button } from 'styled-ui-kit'
 
 globalConfig();
 
 const App = props => (
   <Theme>
-      Hello World
+    <Button>Cancel</Button>
+    <Button primary>Save</Button>
   </Theme>
 )
 ```
