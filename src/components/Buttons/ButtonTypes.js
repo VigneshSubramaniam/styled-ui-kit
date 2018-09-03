@@ -49,12 +49,6 @@ export const BasicButton = styled.button`
     color:${props => props.disabled ? props.theme.button.disabledTextColor :  props.primary?
             props.theme.button.primaryTextColor 
                 : props.theme.textColor };
-    &:hover{
-        background-color: ${props => !props.disabled && props.backgroundColor 
-            ? hexa(props.backgroundColor, 0.9)
-                : props.primary && !props.disabled? hexa(props.theme.button.hoverPrimary, 0.9)
-                    : ""};
-      };
     svg {
         vertical-align: sub;
     }
