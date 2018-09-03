@@ -1,6 +1,6 @@
 {
   "name": "styled-ui-kit",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "license": "MIT",
   "main": "core/index.js",
   "module": "core/index.js",
@@ -8,7 +8,13 @@
     "core",
     "README.md"
   ],
-  "author": "",
+  "contributors": [{
+    "name": "venkateshs",
+    "email": "contactvenkateshsundaram@gmail.com"
+  },{
+    "name": "vig_sub",
+    "email": "mailvignesh.sub@gmail.com"
+  }],
   "keywords": [
     "components",
     "react",

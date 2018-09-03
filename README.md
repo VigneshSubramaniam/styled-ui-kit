@@ -19,8 +19,10 @@ globalConfig();
 
 const App = props => (
   <Theme>
-    <Button>Cancel</Button>
-    <Button primary>Save</Button>
+    <div className="wrapper"> 
+      <Button>Cancel</Button>
+      <Button primary>Save</Button>
+    </div>
   </Theme>
 )
 ```
